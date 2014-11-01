@@ -1,0 +1,9 @@
+---
+- name: Find /dev/sda1 readahead
+  command: /sbin/blockdev --getra /dev/sda1
+  register: readahead_size
+  changed_when: False
+
+- name: Fix /dev/sda1 readahead
+  command: /sbin/blockdev --setra 2048 /dev/sda1
+  when: readahead_size.stdout != "2048"

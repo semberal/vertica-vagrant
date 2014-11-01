@@ -1,0 +1,18 @@
+---
+
+# - name: Ping the server
+#   ping:
+
+- name: Install core packages
+  apt: name={{item}} state=present
+  with_items:
+    - language-pack-en-base
+
+# - name: Reconfigure locales
+  # command: locale-gen en_US.UTF-8
+
+- name: Set locale-related variables
+  lineinfile: dest=/etc/environment regexp="{{item}}=" line="{{item}}=en_US.UTF-8" state=present
+  with_items:
+    - LANG
+    - LC_ALL
