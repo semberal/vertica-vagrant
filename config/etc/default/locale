@@ -1,0 +1,5 @@
+# Since I was not able to change the locale without relogin, this file needs to be provisioned using the vagrant file provisioner.
+# Therefore, when the ansible provisioner starts, this file is already in place and the Ansible SSH session will work with proper
+# locale-related environment variables.
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8

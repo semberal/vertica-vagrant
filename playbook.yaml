@@ -6,5 +6,4 @@
   sudo: True
   sudo_user: root
   roles:
-    - common
     - vertica

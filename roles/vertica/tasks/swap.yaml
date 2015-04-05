@@ -1,5 +1,4 @@
 ---
-
 - name: Create swap space
   command: dd if=/dev/zero of=/mnt/swapfile bs=1024 count=2097152
   when: ansible_swaptotal_mb < 1
@@ -19,4 +18,4 @@
 
 - name: Set swapiness to 1 (use swap only as the last resort)
   shell: echo 1 > /proc/sys/vm/swappiness
-  when: current_swappiness.stdout != 1
+  when: current_swappiness.stdout != '1'
