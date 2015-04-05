@@ -15,6 +15,3 @@ This repository contains Ansible playbooks for the [HP Vertica](http://www.verti
 * Once the provisioning has finished, you can connect to the newly created virtual instance using `vagrant ssh`.
 * Switch to the Vertica database administrator system user account `sudo su dbadmin`.
 * Now you are ready to start playing with the database. There are `vsql` and `adminTools` bash aliases you can use right away.
-
-## Limitations
-* Currently only single node deployment is supported. Even though it is not going to be complicated to deploy a Vertica cluster of three (or more) nodes, a machine with at least 32G of memory would be required.
