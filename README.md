@@ -40,7 +40,7 @@ It is sometimes useful to re-run the command using -vvvv, which prints SSH debug
 
 If you run into such issue, just run:
 ```
-vagrant provision --provision-with ansible`
+vagrant provision --provision-with ansible
 ```
 I should finish successfully now.
 
