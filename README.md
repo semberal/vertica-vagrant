@@ -37,3 +37,6 @@ If you run into such issue, just run:
 vagrant provision --provision-with ansible`
 ```
 I should finish successfully now.
+
+### It doesn't work on Windows
+Unfortunately Ansible does not support Windows on the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin.
