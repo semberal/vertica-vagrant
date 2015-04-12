@@ -24,7 +24,7 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 
 ### Can I run vertica-vagrant from Windows?
 
-Unfortunately Ansible [does not support Windows](http://docs.ansible.com/intro_installation.html#control-machine-requirements) for the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin. However, I'haven't tried it yet and cannot guarentee is will work.
+Unfortunately Ansible [does not support Windows](http://docs.ansible.com/intro_installation.html#control-machine-requirements) for the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin. However, I haven't tried it yet and cannot guarentee is will work.
 
 ## Troubleshooting
 
