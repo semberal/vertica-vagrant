@@ -20,6 +20,12 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 * Switch to the Vertica database administrator system user account `sudo su dbadmin`.
 * Now you are ready to start playing with the database. There are `vsql` and `adminTools` bash aliases you can use right away.
 
+## F.A.Q.
+
+### Can I run vertica-vagrant from Windows?
+
+Unfortunately Ansible [does not support Windows](http://docs.ansible.com/intro_installation.html#control-machine-requirements) for the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin. However, I'haven't tried it yet and cannot guarentee is will work.
+
 ## Troubleshooting
 
 ### Connection timed out
@@ -38,5 +44,4 @@ vagrant provision --provision-with ansible`
 ```
 I should finish successfully now.
 
-### It doesn't work on Windows
-Unfortunately Ansible does not support Windows on the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin.
+
