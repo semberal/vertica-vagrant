@@ -42,6 +42,5 @@ If you run into such issue, just run:
 ```
 vagrant provision --provision-with ansible
 ```
-I should finish successfully now.
-
+It should finish successfully now.
 
