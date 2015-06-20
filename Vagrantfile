@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.require_version ">= 1.7.0" # todo could be lower?
+Vagrant.require_version ">= 1.6.5" # todo could be lower?
 
 VAGRANTFILE_API_VERSION = "2"
 
