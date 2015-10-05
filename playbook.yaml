@@ -1,9 +1,0 @@
----
-- name: Provision the Vertica node
-  hosts:
-    - vertica_nodes
-  remote_user: vagrant
-  sudo: True
-  sudo_user: root
-  roles:
-    - vertica

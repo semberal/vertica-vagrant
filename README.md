@@ -8,12 +8,22 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 
 **Disclaimer:** Vertica is a big-data analytical platform which requires a lot resources to run at its best. The virtual instance presented here is configured to run with 4GB of memory and 2 dedicated CPUs and, therefore, is not suitable for anything beyond very simple educational purposes. Virtual instance configuration can be changed in `Vagrantfile`.
 
+
+## Features
+
+* Complete installation of Vertica is automated, the user can ssh to the guest machine and run `vsql` right away
+* Remote connections from the host machine (using various JDBC GUI tools, for example)
+* Works on all platforms which can run Vagrant and VirtualBox (GNU/Linux, Microsoft Windows, OS X, ...)
+
+
 ## Prerequisites
-* [Ansible](http://ansible.com/) - Installation process automation
+
 * [Vagrant](http://vagrantup.com/) - VM creation, deployment and provisioning
 * [VirtualBox](https://www.virtualbox.org/) - Hypervisor
 
+
 ## Installation
+
 * Clone this repository `git clone git@github.com:semberal/vertica-vagrant.git`.
 * Download [HP Vertica 7.1.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
 * Rename the downloaded archive to *vertica.deb* and place it to the cloned git repository.
@@ -21,28 +31,18 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 * Once the provisioning has finished, you can connect to the newly created virtual instance using `vagrant ssh`.
 * Switch to the Vertica database administrator system user account `sudo su dbadmin`.
 * Now you are ready to start playing with the database. There are `vsql` and `adminTools` bash aliases you can use right away.
+* Alternatively, you can install a GUI tool of you choice and connect to the Vertica database from the host machine:
+** Host: "localhost"
+** Port: "5433" (forwarded from the guest machine)
+** Database: "default"
+** JDBC URI: "jdbc:vertica://localhost:5433/default"
+** Username: "dbadmin"
+** Password: ""
+* You can destroy the virtual instance anytime using `vagrant destroy`.
 
-## F.A.Q.
 
-### Can I run vertica-vagrant from Windows?
+## How it works?
 
-Unfortunately Ansible [does not support Windows](http://docs.ansible.com/intro_installation.html#control-machine-requirements) for the control machine. You can try [this guide](http://www.azavea.com/blogs/labs/2014/10/running-vagrant-with-ansible-provisioning-on-windows/), which shows how to run Vagrant with Ansible provisioner in Cygwin. However, I haven't tried it yet and cannot guarentee it will work.
+First, Vagrant creates a new VirtualBox machine with Ubuntu 14.04 LTS. Vagrant file provisioner then uploads the Vertica DEB package and the directory with Ansible playbooks. In the next step, Vagrant shell provisioner installs Ansible on the guest machine and runs the playbooks, which install and configure Vertica, as well as its dependencies.
 
-## Troubleshooting
-
-### Connection timed out
-Ansible seems not to be able to connect to the newly provisioned virtual instance during `vagrant up` from time to time:
-
-```
-GATHERING FACTS *************************************************************** 
-fatal: [192.168.111.111] => SSH Error: ssh: connect to host 192.168.111.111 port 22: Connection timed out
-    while connecting to 192.168.111.111:22
-It is sometimes useful to re-run the command using -vvvv, which prints SSH debug output to help diagnose the issue.
-```
-
-If you run into such issue, just run:
-```
-vagrant provision --provision-with ansible
-```
-It should finish successfully now.
-
+This is the reason why Ansible does not have to be installed on the host machine anymore. You can, therefore, enjoy vertica-vagrant also on Microsoft Windows (which Ansible [does not support](http://docs.ansible.com/intro_installation.html#control-machine-requirements)).

@@ -1,0 +1,5 @@
+---
+- name: Provision the Vertica node
+  hosts: all
+  roles:
+    - vertica
