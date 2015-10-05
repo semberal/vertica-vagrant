@@ -10,7 +10,7 @@ echo "******************************************"
 echo "** INSTALLATION COMPLETED SUCCESSFULLY! **"
 echo "******************************************"
 echo
-echo "Everything has been configured, please follow the following steps to connect to the Vertica database:"
+echo "Everything has been configured, please follow these steps to connect to the Vertica database:"
 echo "* vagrant ssh"
 echo "* sudo su dbadmin"
 echo "* vsql"
