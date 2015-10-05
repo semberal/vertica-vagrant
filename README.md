@@ -12,6 +12,7 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 ## Features
 
 * Complete installation of Vertica is automated, the user can ssh to the guest machine and run `vsql` right away.
+* Very few requirements for the host machine, only Vagrant and VirtualBox are required. Ansible [does not need to be installed on the host machine](https://github.com/semberal/vertica-vagrant/pull/2) anymore.
 * Remote connections from the host machine (using various JDBC GUI tools, for example).
 * Works on all platforms which can run Vagrant and VirtualBox (GNU/Linux, Microsoft Windows, OS X, ...).
 
