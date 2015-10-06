@@ -32,13 +32,12 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 * Once the provisioning has finished, you can connect to the newly created virtual instance using `vagrant ssh`.
 * Switch to the Vertica database administrator system user account `sudo su dbadmin`.
 * Now you are ready to start playing with the database. There are `vsql` and `adminTools` bash aliases you can use right away.
-* Alternatively, you can install a GUI tool of you choice and connect to the Vertica database from the host machine:
-  * Host: "localhost"
-  * Port: "5433" (forwarded from the guest machine)
+* Alternatively, you can install a GUI tool like [DBeaver](http://dbeaver.jkiss.org/), [DBVisualizer](https://www.dbvis.com/), or any other you prefer, and connect to the Vertica database from the host machine:
+  * Host: "localhost:5433" (port is forwarded from the guest machine using Vagrant)
   * Database: "default"
-  * JDBC URI: "jdbc:vertica://localhost:5433/default"
   * Username: "dbadmin"
   * Password: ""
+  * JDBC URI: "jdbc:vertica://localhost:5433/default"
 * You can destroy the virtual instance anytime using `vagrant destroy`.
 
 
