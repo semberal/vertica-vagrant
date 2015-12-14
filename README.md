@@ -6,7 +6,9 @@ This repository contains Ansible playbooks for the [HP Vertica](http://www.verti
 
 Vertica is columnar analytical big data database from HP, getting a lot of traction recently. Unfortunately, the installation process is somewhat cumbersome, several system settings need to be tweaked and it isn't really easy to get up and running quickly to just try things. This project aims to provide resources to automate not only the installation process, but also deployment of a virtual machine, which you can play with and terminate at any moment. Getting started with HP Vertica is now as simple as `vagrant up`!
 
-**Disclaimer:** Vertica is a big-data analytical platform which requires a lot resources to run at its best. The virtual instance presented here is configured to run with 4GB of memory and 2 dedicated CPUs and, therefore, is not suitable for anything beyond very simple educational purposes. Virtual instance configuration can be changed in `Vagrantfile`.
+**Disclaimer:** Vertica is a big-data analytical platform which requires a lot resources to run at its best. The virtual instance presented here is configured to run with 4GB of memory and 2 dedicated CPUs and, therefore, is not suitable for anything beyond very simple educational purposes. Virtual instance settings can be changed in `Vagrantfile`.
+
+**Versioning note:** The current installation and configuration procedure is compatible with Vertica 7.2.x. If you are interested in older versions of Vertica, please checkout the appropriate git branch.
 
 
 ## Features
@@ -26,7 +28,7 @@ Vertica is columnar analytical big data database from HP, getting a lot of tract
 ## Installation
 
 * Clone this repository `git clone git@github.com:semberal/vertica-vagrant.git`.
-* Download [HP Vertica 7.1.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
+* Download [HP Vertica 7.2.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
 * Rename the downloaded archive to *vertica.deb* and place it to the cloned git repository.
 * Run `vagrant up` to create, launch and provision a VirtualBox instance.
 * Once the provisioning has finished, you can connect to the newly created virtual instance using `vagrant ssh`.

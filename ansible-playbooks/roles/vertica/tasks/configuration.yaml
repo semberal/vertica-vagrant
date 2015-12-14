@@ -1,0 +1,12 @@
+---
+- name: Set default locale to en_US.UTF-8
+  lineinfile: dest=/etc/default/locale state=present line='LC_ALL="en_US.UTF-8"'
+
+- name: Check if transparent hugepages are enabled
+  command: cat /sys/kernel/mm/transparent_hugepage/enabled
+  register: hugepages_check_output
+  changed_when: False
+
+- name: Disable transparent hugepages
+  shell: echo never > /sys/kernel/mm/transparent_hugepage/enabled
+  when: "'[always]' in hugepages_check_output.stdout"
