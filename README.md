@@ -40,6 +40,7 @@ Vertica is columnar analytical big data database from HPE, getting a lot of trac
   * Username: "dbadmin"
   * Password: ""
   * JDBC URI: "jdbc:vertica://localhost:5433/default"
+* To stop the virtual instance, run `vagrant halt`. `vagrant up` starts it again.
 * You can destroy the virtual instance anytime using `vagrant destroy`.
 
 
