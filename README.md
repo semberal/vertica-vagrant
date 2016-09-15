@@ -8,7 +8,7 @@ Vertica is columnar analytical big data database from HPE, getting a lot of trac
 
 **Disclaimer:** Vertica is a big-data analytical platform which requires a lot resources to run at its best. The virtual instance presented here is configured to run with 4GB of memory and 2 dedicated CPUs and, therefore, is not suitable for anything beyond very simple educational purposes. Virtual instance settings can be changed in `Vagrantfile`.
 
-**Versioning note:** The current installation and configuration procedure is compatible with Vertica 7.2.x. If you are interested in older versions of Vertica, please checkout the appropriate git branch.
+**Versioning note:** The current installation and configuration procedure is compatible with Vertica 8.0.x. If you are interested in older versions of Vertica, please checkout the appropriate git branch.
 
 
 ## Features
@@ -28,7 +28,7 @@ Vertica is columnar analytical big data database from HPE, getting a lot of trac
 ## Installation
 
 * Clone this repository `git clone git@github.com:semberal/vertica-vagrant.git`.
-* Download [HPE Vertica 7.2.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
+* Download [HPE Vertica 8.0.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
 * Rename the downloaded archive to *vertica.deb* and place it to the cloned git repository.
 * Run `vagrant up` to create, launch and provision a VirtualBox instance.
 * Once the provisioning has finished, you can connect to the newly created virtual instance using `vagrant ssh`.
