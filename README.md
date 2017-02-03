@@ -27,7 +27,7 @@ Vertica is columnar analytical big data database from HPE, getting a lot of trac
 
 ## Installation
 
-* Clone this repository `git clone git@github.com:semberal/vertica-vagrant.git`.
+* Clone this repository `git clone https://github.com/semberal/vertica-vagrant.git`.
 * Download [HPE Vertica 8.0.x community edition](https://my.vertica.com/download-community-edition/) for Ubuntu 14.04 LTS (registration required).
 * Rename the downloaded archive to *vertica.deb* and place it to the cloned git repository.
 * Run `vagrant up` to create, launch and provision a VirtualBox instance.
