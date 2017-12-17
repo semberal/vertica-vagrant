@@ -1,7 +1,5 @@
 # vertica-vagrant
 
-[![Join the chat at https://gitter.im/semberal/vertica-vagrant](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/semberal/vertica-vagrant?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 This repository contains Ansible playbooks for the [HPE Vertica](http://www.vertica.com/) analytical database running in VirtualBox. Vagrant is used to deploy the VM instance.
 
 Vertica is columnar analytical big data database from HPE, getting a lot of traction recently. Unfortunately, the installation process is somewhat cumbersome, several system settings need to be tweaked and it isn't really easy to get up and running quickly to just try things. This project aims to provide resources to automate not only the installation process, but also deployment of a virtual machine, which you can play with and terminate at any moment. Getting started with HPE Vertica is now as simple as `vagrant up`!
