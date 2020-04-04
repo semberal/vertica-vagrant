@@ -1,6 +1,6 @@
 # vertica-vagrant
 
-**This project is no longer maintained because it is not needed anymore. [Official virtual machines](https://www.vertica.com/download/vertica/community-edition/) of Vertical Community Edition are now available**.
+**This project is no longer maintained because it is not needed anymore. [Official virtual machines](https://www.vertica.com/download/vertica/community-edition/) of Vertica Community Edition are now available**.
 
 This repository contains Ansible playbooks for the [HPE Vertica](http://www.vertica.com/) analytical database running in VirtualBox. Vagrant is used to deploy the VM instance.
 
